@@ -41,7 +41,7 @@
         <h2>Competition</h2>
         <p>The full dataset consists of 6000 images which are then divided into the following three splits: training (70%), validation (15%) and test (15%).</p>
         <p>The training data consists of 4200 4K UHD images covering a wide range of content which are subjectively annotated with mean opinion ratings. The training data is already made available to the registered participants.</p>
-        <p>The validation set will consist of 900 images with MOS ratings (please see deadlines for dates when they will be released).</p>
+        <p>The validation set will consist of 900 images with MOS (Mean Opinion Score) ratings (please refer to the Important Dates section for release dates).</p>
         <p>The test set will consist of 900 images and will not be released to the challenge participants but will be used by the challenge organizers to evaluate the submitted model.</p>
         <h3>Important</h3>
         <ul>
@@ -53,18 +53,18 @@
     <section class="container">
         <h2>Organizers</h2>
         <ul>
-            <li>Vlad Hosu (Sony AI Zurich Lab) &lt;vlad.hosu[at]sony.com&gt;</li>
-            <li>Saman Zadtootaghaj (Sony Interactive Entertainment, Berlin) &lt;Saman.Zadtootaghaj@sony.com&gt; **urgent contact</li>
+            <li>Vlad Hosu (Sony AI Zurich Lab) &lt;vlad.hosu@sony.com&gt;</li>
+            <li>Saman Zadtootaghaj (Sony Interactive Entertainment, Berlin) &lt;Saman.Zadtootaghaj@sony.com&gt;</li>
             <li>Nabajeet Barman (Sony Interactive Entertainment, London) &lt;Nabajeet.Barman@sony.com&gt;</li>
         </ul>
     </section>
 
     <section class="container">
         <h2>Evaluation</h2>
-        <p>The evaluation consists of the task of predicting the quality of the 4K UHD images. The methods will be ranked according to their correlation with the human subjective ratings (SROCC, PLCC, KCC). Please see below for detailed evaluation criteria.</p>
-        <p>All submitted models should be able to process at a speed of a minimum of 50 MACs. Only models which pass this minimum speed/complexity requirement will be eligible for prize consideration.</p>
+        <p>The evaluation consists of the task of predicting the quality of the 4K UHD images (Ultra High Definition 1, which has a resolution of at least 3840x2160 pixels). The methods will be ranked according to their correlation with the human subjective ratings (SROCC, PLCC, KCC). Please see below for detailed evaluation criteria.</p>
+        <p>We are aiming to develop close to realtime algorithms; therefore, all submitted models should be able to process at a speed of a minimum of 50 MACs (multiply–accumulate). Only models which pass this minimum speed/complexity requirement will be eligible for prize consideration.</p>
         <p>All qualifying models (models which meet the minimum complexity criteria defined above), will be evaluated based on their average performance considering three correlation measures: SROCC, PLCC, and KCC. The average of these three-correlation measures will be used as the final performance measure to decide the winning model.</p>
-        <p>The participants must report their MACs and integrate the script in their code that reports MACs for a given image input for final submission.</p>
+        <p>Participants must report their model's MACs and integrate a script in their code that calculates MACs for a given image input, which will be required for the final submission.</p>
         <p>An example of reporting MACs in PyTorch is given in the following GitHub link: <a href="https://github.com/mv-lab/VideoAI-Speedrun">https://github.com/mv-lab/VideoAI-Speedrun</a></p>
         <p>The participants can use additional public datasets for developing their solutions; however, note that the MOS scale and subjective test design might be different from our setup.</p>
         <p>Participants can use any pre-trained and existing solutions. However, only novel methods will be encouraged to submit a paper to the workshop.</p>
@@ -74,7 +74,7 @@
 
     <section class="container">
         <h2>Dataset Description</h2>
-        <p>The UHD dataset comprises 6000 UHD-1 images (at least 3840x2160). Based on popularity indicators, it's selected from the top photos from Pixabay out of 1.4 million in total (at the time of indexing). The images are of high aesthetics and technical quality. Synthetic (CG or heavily edited) images were removed manually (as far as I remember)—they are all authentic photos, no generated stuff. They were collected back in ~2020, when this was not so much an issue. The annotation was done by 10-ish photography freelancers, repeated twice for each. The filtering of the quality of the annotators was strong; only the most self-consistent ones made it. Thus, the final ratings are high quality and reliable. The annotation is for technical quality, not aesthetics, and the confounds are largely accounted for because of the annotator's background. The quality of many of the images is higher than that of some super-resolution datasets, and it's 4k+, so it can work both as an IQA and a super-res dataset, depending on how we pitch it.</p>
+        <p>The UHD dataset comprises 6000 UHD-1 images (at least 3840x2160). The images were selected from the top photos on Pixabay based on popularity indicators, out of a total of 1.4 million images available at the time of indexing. The images are of high aesthetics and technical quality. Synthetic (Computer Graphics or heavily edited) images were removed manually (as far as I remember)—they are all authentic photos, no generated stuff. They were collected back in ~2020, when this was not so much an issue. Each image was annotated twice by a group of approximately 10 professional photography freelancers. Thus, the final ratings are high quality and reliable. The annotation is for technical quality, not aesthetics, and the confounds are largely accounted for because of the annotator's background. The quality of many of the images is higher than that of some super-resolution datasets, and it's 4k+, so it can work both as an IQA and a super-res dataset, depending on how we pitch it.</p>
         <p>You can find some samples of the dataset in the following:</p>
     </section>
 
